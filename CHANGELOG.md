@@ -1,4 +1,4 @@
-# itk-os2display/screen
+# os2display/screen
 
 ## 5.0.2
 
