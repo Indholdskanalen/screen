@@ -70,7 +70,7 @@ angular.module('ikApp').directive('slide', ['cssInjector',
           cssInjector.add(scope.ikSlide.css_path);
         });
       },
-      template: '<div data-ng-include="ikSlide.template_path"></div>'
+      template: '<div data-ng-include="ikSlide.template_path" class="slide-{{ikSlide.uniqueId}}"></div>'
     };
   }
 ]);

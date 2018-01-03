@@ -7,6 +7,7 @@
  */
 angular.module('ikApp', [
     'ngAnimate',
+    'ngSanitize',
     'angular.css.injector',
 
     'itkLog',

@@ -32,7 +32,7 @@ var jsPaths = [
 ];
 var jsAssetPaths = [
   './assets/lib/jquery-*.min.js',
-  './assets/lib/angular-1.*.min.js',
+  './assets/lib/angular.min.js',
   './assets/lib/*.js',
   './assets/modules/**/*.js'
 ];

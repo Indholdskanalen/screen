@@ -40,8 +40,9 @@ angular.module('ikApp').factory('socket', ['$rootScope', 'itkLog',
         self.set = function set(value, expire) {
           var cookie = name + '=' + escape(value) + ';';
 
+          // Defaults to year 2038
           if (expire === undefined) {
-            expire = 'Thu, 01 Jan 2018 00:00:00 GMT';
+            expire = 'Mon, 18 Jan 2038 00:00:00 GMT';
           }
           cookie += 'expires=' + expire + ';';
 
