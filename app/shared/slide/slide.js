@@ -10,7 +10,7 @@
  *   ik-slide (object): The slide to display.
  *   show (boolean): Should the slide be visible?
  *
- *   ---- used for creation unique slide-id ----
+ *   ---- used for creating unique slide-id ----
  *   array-id (integer): The which displayIndex does this slide belong to?
  *   channel-id (integer): What channel does the slide belong to?
  *   index (integer): Which index in the channel does that slide have?

@@ -459,7 +459,16 @@
     var slide = self.scope.channels[self.scope.displayIndex][self.scope.channelIndex].slides[self.scope.slideIndex];
 
     // Call the run function for the given slide_type.
-    window.slideFunctions[slide.js_script_id].run(slide, self);
+    if (window.slideFunctions.hasOwnProperty(slide.js_script_id)) {
+        window.slideFunctions[slide.js_script_id].run(slide, self);
+    }
+    else {
+      // Script is not available. Wait 5 seconds and continue to next slide.
+      self.itkLog.info('slideFunction "' + slide.js_script_id + '" not defined. Wait 5 seconds and continue to next slide.');
+      self.$timeout(function () {
+          self.nextSlide();
+      }, 5000);
+    }
   };
 
   /**
@@ -602,6 +611,8 @@
 
             // If the channel is in the array, remove it.
             if (scope.channels[shadowIndex].hasOwnProperty(id)) {
+              itkLog.info("Removing channel " + channel.id + " from region " + scope.regionId + " with shadowIndex: " + shadowIndex);
+
               delete scope.channels[shadowIndex][id];
               scope.channelKeys[shadowIndex] = Object.keys(scope.channels[shadowIndex]);
               scope.slidesUpdated = true;
