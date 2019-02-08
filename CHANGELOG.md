@@ -1,5 +1,12 @@
 # os2display/screen CHANGELOG
 
+## 5.0.4
+
+* Added favicon.
+* Removed Offline. Added fake service instead.
+* Removed stacktrace.
+* Added caching of ajax requests, to avoid getting the same js from the backend multiple times.
+
 ## 5.0.3
 
 * Moved cookie to localstorage.

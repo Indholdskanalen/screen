@@ -1,3 +1,9 @@
+
+// Enable caching of ajax requests.
+$.ajaxSetup({
+    cache: true
+});
+
 /**
  * Defines the Angular Application.
  *

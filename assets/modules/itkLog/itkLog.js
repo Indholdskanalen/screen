@@ -47,18 +47,13 @@ app.factory('itkLog', ['$http', '$timeout', '$log',
             "type": "error",
             "date": new Date(),
             "message": "" + message,
-            "cause": cause,
-            "stacktrace": printStackTrace()
+            "cause": cause
           };
 
           factory.message = error;
 
           if (config.logToConsole) {
             $log.error(error);
-          }
-
-          if (config.errorCallback) {
-            $http.post(config.errorCallback, error);
           }
         }
       };
