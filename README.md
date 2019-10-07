@@ -1,5 +1,10 @@
-# Aroskanalen screen
+# !!! Deprecation warning !!!
+This repository has been included in the administration as a bundle in os2display 6.1.0.
+https://github.com/os2display/admin/blob/master/CHANGELOG.md#610
 
+No new development will not be made in this repository.
+
+# Aroskanalen screen
 
 # Introduction
 This is a javascript client for aroskanalen dislpay systems. For more information see https://github.com/aroskanalen/docs/blob/development/Installation%20guide.md in the docs repository on github.com.
